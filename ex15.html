@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>z-index 속성</title>
+    <!-- 절대좌표의 레이어(계층) - 수직 높낮이 -->
+    <!-- depth(layer)개념 : 중첩(오버레이)될때 어떤것이 위에있을지 -->
+    <!-- z-index가 높은것이 위로 올라간다. -->
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+            border: 1px solid red;
+    
+            position:absolute;
+        }
+        .red{
+            background-color: red;
+            left:10px; top: 10px;
+            z-index: 5;
+        }
+        .green{
+            background-color: green;
+            left:50px; top:50px;
+            z-index: 3;
+        }
+        .blue{
+            background-color: blue;
+            left:90px; top:90px;
+            z-index: 1;
+        }
+        /* 연습문제 */
+        /* 위로부터 blue-green-red로 깔리도록 설정하시오 */
+        .blue{
+            z-index: 5;
+        }
+        .green{
+            z-index: 3;
+        }
+        .red{
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Header tag h1</h1>
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+    <h1>Header tag h1</h1>
+</body>
+</html>

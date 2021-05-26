@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>배경이미지 위에 글자 배치</title>
+    <style>
+        div {
+            width: 800px;
+            height: 400px;
+            background-image: url('work_office.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        /* 부모에게 상대좌표를 적용해야 됨. */
+        position: relative;
+        }
+
+        h1 {
+            color:deepskyblue;
+            background-color: white;
+            /* 자식에겐 절대좌표 적용 */
+            position: absolute;
+            /* top: 150px;
+            left:200px; */
+
+            top:45%;
+            left:45%;
+            transform: translate( -55%,-55%);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>효율적인 회의시간</h1>
+    </div>
+</body>
+
+</html>

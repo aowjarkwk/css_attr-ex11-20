@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>box-sizing 속성 - 박스모델</title>
+    <!-- CSS box-sizing 속성: content-box(기본값), border-box -->
+    <!-- context-box : content의 width, height를 준 것 -->
+    <!-- border-box : content + padding + border 에 width,height를 준 것 -->
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        /* 콘텐츠가 자기 크기를 벗어나면 안보이게 잘라버림. */
+        overflow: hidden;
+        border: 10px solid black;
+        /* 상하좌우 마진 10px */
+        margin: 10px;
+        /* 상하좌우 패딩 10px */
+        padding: 10px;
+    }
+    div:nth-child(1){
+        /* 기본값으로 콘텐츠 크기에 width height를 줌 */
+        box-sizing: content-box;
+        background-color: aqua;
+    }
+    div:nth-child(2){
+        /* border + padding + content에 width height를 줌 */
+        /* 왜 사용? 계산이 편하고 배치가 수월하다. */
+        box-sizing: border-box;
+        background-color: brown;
+    }
+</style>
+</head>
+
+<body>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos facere dolore ratione praesentium cum
+        mollitia perspiciatis consequuntur repellat a, dolores, repellendus nulla quidem natus optio voluptates hic et
+        non facilis?</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos facere dolore ratione praesentium cum
+        mollitia perspiciatis consequuntur repellat a, dolores, repellendus nulla quidem natus optio voluptates hic et
+        non facilis?</div>
+</body>
+
+</html>
